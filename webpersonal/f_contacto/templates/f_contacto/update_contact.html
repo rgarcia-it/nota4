@@ -1,0 +1,76 @@
+{% extends 'core/HTML/basetemplate.html' %}
+{% load static %}
+{% block title %} Contacto {% endblock title %}
+{% block content %}
+{% load widget_tweaks %}
+<body>
+    
+    
+            <div class="col-lg-6 d-flex container ">
+                
+                <form class="contact-form row " method="post" action="" id="formulario_contacto" onsubmit="return validar(); ">
+                    {% csrf_token %}
+                    
+                    <div class="col-lg-6">
+                        <div class="form-floating">
+                           
+                            {% render_field form.name type="text" class="form-control form-control-lg light-300 " placeholder="Nombre" %}
+                            
+                        </div>
+                    </div><!-- End Input Name -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                           
+                             {% render_field form.email type="text" class="form-control form-control-lg light-300"  placeholder="Email" %}
+                        </div>
+                    </div><!-- End Input Email -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            
+                             {% render_field form.phone type="text" class="form-control form-control-lg light-300"  placeholder="Phone" %}
+                        </div>
+                    </div><!-- End Input Phone -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                           
+                            {% render_field form.paiss type="text" class="form-control form-control-lg light-300"  placeholder="Compania" %}
+                            
+                        </div>
+                    </div><!-- End Input Company Name -->
+                    
+                    <div class="col-12">
+                        <div class="form-floating mb-4">
+                            
+                            {% render_field form.direccion type="text" class="form-control form-control-lg light-300"   placeholder="Asunto" %}
+                            
+                        </div>
+                    </div><!-- End Input Subject -->
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            
+                            {% render_field form.pago type="text" class="form-control form-control-lg light-300"   placeholder="Mensaje" %}
+                            
+                        </div>
+                    </div><!-- End Textarea Message -->
+                    
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            
+                            {% render_field form.num_ver type="text" class="form-control form-control-lg light-300"   placeholder="Mensaje" %}
+                            
+                        </div>
+                    </div><!-- End Textarea Message -->
+
+                    <div class="col-md-12 col-12 m-auto text-end">
+                        <button type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">Actualizar</button>
+                    </div>
+                </form>
+                
+            </div>
+</body>
+            <!-- End Contact Form -->
+{% endblock %}

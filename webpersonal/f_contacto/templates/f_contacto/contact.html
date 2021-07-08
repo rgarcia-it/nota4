@@ -1,0 +1,180 @@
+{% extends 'core/HTML/basetemplate.html' %}
+{% load static %}
+{% block title %} Contacto {% endblock title %}
+{% block content %}
+{% load widget_tweaks %}
+<body>
+    
+    <!-- Start Banner Hero --
+    <section class="bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="contact-header col-lg-4">
+                    <h1 class="h2 pb-3 text-primary">Contactanos</h1>
+                    <h3 class="h4 regular-400">Confía en nosotros</h3>
+                    <p class="light-300">
+                        Tardamos máximo 24 horas en responder.
+                    </p>
+                </div>        
+                <div class="contact-img col-lg-5 align-items-end col-md-4">
+                    <img src="{% static 'IMG/banner-img-01.svg' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Hero -->
+
+      
+            <!-- Start Contact -->
+    <section class="container py-5">
+
+        <h1 class="col-12 col-xl-8 h2 text-left text-primary pt-3">Hablemos</h1>
+        <h2 class="col-12 col-xl-8 h4 text-left regular-400">  </h2>
+        <p class="col-12 col-xl-8 text-left text-muted pb-5 light-300">
+            Incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+            gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate.
+        </p>
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300" id="boton_contacto">Llenar Formulario</button>
+        </div>  
+        <br></br>
+
+        <div class="row pb-4" >
+            <div class="col-lg-4" >
+
+                <div class="contact row mb-4">
+                    <div class="contact-icon col-lg-3 col-3">
+                        <div class="py-3 mb-2 text-center border rounded text-secondary">
+                            <i class='display-6 bx bx-news'></i>
+                        </div>
+                    </div>
+                    <ul class="contact-info list-unstyled col-lg-9 col-9  light-300">
+                        <li class="h5 mb-0">Contacto Marketing</li>
+                        <li class="text-muted">Mr. Juanito Perez</li>
+                        <li class="text-muted">81189998819199917253</li>
+                    </ul>
+                </div>
+
+                <div class="contact row mb-4">
+                    <div class="contact-icon col-lg-3 col-3">
+                        <div class="border py-3 mb-2 text-center border rounded text-secondary">
+                            <i class='bx bx-laptop display-6' ></i>
+                        </div>
+                    </div>
+                    <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
+                        <li class="h5 mb-0">Soporte Técnico</li>
+                        <li class="text-muted">Mr. Elber Gonzales</li>
+                        <li class="text-muted">010-020-0340</li>
+                    </ul>
+                </div>
+
+                <div class="contact row mb-4">
+                    <div class="contact-icon col-lg-3 col-3">
+                        <div class="border py-3 mb-2 text-center border rounded text-secondary">
+                            <i class='bx bx-money display-6'></i>
+                        </div>
+                    </div>
+                    <ul class="contact-info list-unstyled col-lg-9 col-9 light-300">
+                        <li class="h5 mb-0">Plan Empresas</li>
+                        <li class="text-muted">Mr. Richard Miles</li>
+                        <li class="text-muted">010-020-0340</li>
+                    </ul>
+                </div>
+               
+                
+                
+
+
+            </div>
+            
+
+            <!-- Start Contact Form -->
+            <div class="col-lg-8 " id="formulario_contacto_div">
+                <form class="contact-form row" method="post" action="" id="formulario_contacto" onsubmit="return validar();">
+                    {% csrf_token %}
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                           <!-- <input type="text" class="form-control form-control-lg light-300" id="floatingname" name="inputname" placeholder="Nombre">-->
+                            <label for="floatingname light-300">Nombre</label>
+                            {% render_field form.name type="text" class="form-control form-control-lg light-300" id="floatingname"  placeholder="Nombre" %}
+                            
+                        </div>
+                    </div><!-- End Input Name -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                           <!--  <input type="text" class="form-control form-control-lg light-300" id="floatingemail" name="inputemail" placeholder="Email">-->
+                            <label for="floatingemail light-300">Email</label>
+                             {% render_field form.email type="text" class="form-control form-control-lg light-300" id="floatingemail"  placeholder="Email" %}
+                        </div>
+                    </div><!-- End Input Email -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                           <!-- <input type="number" class="form-control form-control-lg light-300" id="floatingphone" name="inputphone" placeholder="Telefono">-->
+                            <label for="floatingphone light-300">Telefono</label>
+                             {% render_field form.phone type="number" class="form-control form-control-lg light-300" id="floatingphone"  placeholder="Telefono" %}
+                        </div>
+                    </div><!-- End Input Phone -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                          <!--   <input type="text" class="form-control form-control-lg light-300" id="floatingcompany" name="inputcompany" placeholder="Compañia"> -->
+                            <label for="floatingcompany light-300">Nombre de la compañia</label>
+                            {% render_field form.company type="text" class="form-control form-control-lg light-300" id="floatingcompany"  placeholder="Compañia" %}
+                        </div>
+                    </div><!-- End Input Company Name -->
+
+                    <div class="col-12">
+                        <div class="form-floating mb-4">
+                           <!-- <input type="text" class="form-control form-control-lg light-300" id="floatingsubject" name="inputsubject" placeholder="Asunto"> -->
+                            <label for="floatingsubject light-300">Asunto</label>
+                            {% render_field form.subject type="text" class="form-control form-control-lg light-300" id="floatingsubject"  placeholder="Asunto" %}
+                        </div>
+                    </div><!-- End Input Subject -->
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <!--<textarea class="form-control light-300" rows="8" placeholder="Mensaje" id="floatingtextarea"></textarea> -->
+                            <label for="floatingtextarea light-300">Mensaje</label>
+                            {% render_field form.message  class="form-control form-control-lg light-300" id="floatingtextarea"  %}
+                            	
+                        </div>
+                    </div><!-- End Textarea Message -->
+
+                    <div class="col-md-12 col-12 m-auto text-end">
+                        <button type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">Enviar</button>
+                    </div>
+
+                </form>
+            </div>
+            <!-- End Contact Form -->
+
+
+        </div>
+    </section>
+    <!-- End Contact -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script> 
+    <!-- Templatemo -->
+    <script src="{% static 'js/templatemo.js' %}"></script>
+    <!-- Custom -->
+    <script src="{% static 'js/custom.js' %}"></script> 
+    <!-- SWEET ALERT -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</body>
+
+</html>
+
+{% endblock %}

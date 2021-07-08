@@ -1,0 +1,122 @@
+{% extends 'core/HTML/basetemplate.html' %}
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block content %}
+
+
+<body onload="opcionesCriptomoneda()">
+<!-- 
+<section>
+    <div class="custom-slider text-white">
+    {% for slide in slides %}
+    <div class="custom-slide custom-slide{{forloop.counter}} active-slide" style="background: url({{slide.image.url}});">
+    <div class="custom-overlay"></div>
+    <div class="custom-caption-container">
+        <h1 class="custom-caption display-4 text-center text-uppercase"> {{slide.title}} </h1>
+        <h4 class="text-center custom-sub-caption">{{slide.sub_title}}</h4>
+        </div>
+    </div>
+    {%endfor%}
+    <div class="diagonal bg-gray"></div>
+    </div>
+</section>
+-->
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                
+                </div>
+            </div>
+            </div>
+        </div>    
+
+    <!-- Start Service -->
+    
+    <section class="service-wrapper py-3">
+        <div class="container-fluid pb-3">
+            <div class="row">
+                <h2 class="h2 text-center col-12 py-5 semi-bold-600">NewHub Chile página oficial Latam</h2>
+                <div class="service-header col-2 col-lg-3 text-end light-300">
+                    <i class='bx bx-gift h3 mt-1'></i>
+                </div>
+                <div class="service-heading col-10 col-lg-9 text-start float-end light-300">
+                    <h2 class="h3 pb-4 typo-space-line" ></h2>
+                </div>
+            </div>
+            <p class="service-footer col-10 offset-2 col-lg-9 offset-lg-3 text-start pb-3 text-muted px-2">
+                El futuro es hoy.
+            </p>
+        </div>
+
+  
+
+
+
+<div id="mapa">
+
+</div>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    
+    <!-- Templatemo -->
+    <script src="{% static 'js/templatemo.js' %}"></script>   
+    <!-- Custom -->
+    <script src="{% static 'js/custom.js' %}"></script>    
+    <!-- SWEET ALERT -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY840epPBoFdsmFpa3WGWBhG-e-bzr_7E&callback=iniciarMap">
+  </script>       
+    <!-- Isotope -->
+    <script src="{% static 'js/isotope.pkgd.js' %}"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function() {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function() {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
+{% endblock %}
+
+
+
+

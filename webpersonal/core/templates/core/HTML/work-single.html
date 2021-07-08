@@ -1,0 +1,269 @@
+{% extends 'core/HTML/basetemplate.html' %}
+{% load static %}
+{% block title %} Trabajos {% endblock title %}
+{% block content %}
+<body>
+   
+
+
+    <!-- Start Banner Hero -->
+    <div id="work_single_banner" class="bg-light w-100">
+        <div class="container-fluid text-light d-flex justify-content-center align-items-center border-0 rounded-0 p-0 py-5">
+            <div class="banner-content col-lg-8 m-lg-auto text-center py-5 px-3">
+                <h1 class="banner-heading h2 pb-5 typo-space-line-center">Nuestros trabajos</<h1>
+                </h1>
+                <h3 class="h4 pb-2 light-300">Registro de nuestros trabajos</h3>
+                <p class="banner-footer light-300">
+                    Texto ejemplo
+                </p>
+            </div>
+        </div>
+    </div>
+  
+           <!-- Modal -->
+           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ejemplo diferentes trabajos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quas quo doloribus autem neque exercitationem magnam obcaecati dolorem. Architecto tempora ipsum qui minima unde voluptatem porro pariatur aliquam dolorem atque?
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                
+                </div>
+            </div>
+            </div>
+        </div>   
+
+
+<section class="container overflow-hidden py-5">
+    <div class="row gx-5 gx-sm-3 gx-lg-5 gy-lg-5 gy-3 pb-3 projects">
+        
+        <!-- Start Recent Work -->
+        <div class="col-xl-3 col-md-4 col-sm-6 project ui branding">
+            <a  type="button" data-toggle="modal" data-target="#exampleModal" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <img class="service card-img" src="{% static 'IMG/services-01.jpg' %}" alt="Card image">
+                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="service-work-content text-left text-light">
+                        <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300" >UI/UX diseño</span>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- End Recent Work -->
+
+        <!-- Start Recent Work -->
+        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
+            <a  type="button" data-toggle="modal" data-target="#exampleModal" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <img class="card-img" src="{% static 'IMG/services-02.jpg' %}" alt="Card image">
+                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="service-work-content text-left text-light">
+                        <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Trabajo social</span>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- End Recent Work -->
+
+        <!-- Start Recent Work -->
+        <div class="col-xl-3 col-md-4 col-sm-6 project branding">
+            <a  type="button" data-toggle="modal" data-target="#exampleModal" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <img class="card-img" src="{% static 'IMG/services-03.jpg' %}" alt="Card image">
+                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="service-work-content text-left text-light">
+                        <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Marketing</span>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- End Recent Work -->
+
+        <!-- Start Recent Work -->
+        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
+            <a  type="button" data-toggle="modal" data-target="#exampleModal" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <img class="card-img" src="{% static 'IMG/services-04.jpg' %}" alt="Card image">
+                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="service-work-content text-left text-light">
+                        <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Graficos</span>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- End Recent Work -->
+
+        <!-- Start Recent Work -->
+        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic">
+            <a  type="button" data-toggle="modal" data-target="#exampleModal" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <img class="card-img" src="{% static 'IMG/services-05.jpg' %}" alt="Card image">
+                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="service-work-content text-left text-light">
+                        <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Marketing digital</span>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- End Recent Work -->
+
+        <!-- Start Recent Work -->
+        <div class="col-xl-3 col-md-4 col-sm-6 project branding">
+            <a  type="button" data-toggle="modal" data-target="#exampleModal" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <img class="card-img" src="{% static 'IMG/services-06.jpg' %}" alt="Card image">
+                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="service-work-content text-left text-light">
+                        <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Desarrollos</span>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- End Recent Work -->
+
+        <!-- Start Recent Work -->
+        <div class="col-xl-3 col-md-4 col-sm-6 project branding">
+            <a  type="button" data-toggle="modal" data-target="#exampleModal" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <img class="card-img" src="{% static 'IMG/services-07.jpg' %}" alt="Card image">
+                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="service-work-content text-left text-light">
+                        <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Negocios</span>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- End Recent Work -->
+
+        <!-- Start Recent Work -->
+        <div class="col-xl-3 col-md-4 col-sm-6 project ui graphic branding">
+            <a  type="button" data-toggle="modal" data-target="#exampleModal" class="service-work card border-0 text-white shadow-sm overflow-hidden mx-5 m-sm-0">
+                <img class="card-img" src="{% static 'IMG/services-08.jpg' %}" alt="Card image">
+                <div class="service-work-vertical card-img-overlay d-flex align-items-end">
+                    <div class="service-work-content text-left text-light">
+                        <span class="btn btn-outline-light rounded-pill mb-lg-3 px-lg-4 light-300">Otros</span>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div><!-- End Recent Work -->
+
+    </div>
+</section>
+<!-- End Service -->
+
+
+        <div class="row">
+            <div class="col-md-8 m-auto text-left justify-content-center">
+                <p class="pt-5 text-muted light-300">
+                    algunos ejemplos de la calidad de nuestros trabajos en diversas compañias que han confiado en noostros.
+                </p>
+            </div>
+        </div><!-- End Paragrph -->
+
+
+        <div class="row">
+            <div class="col-md-8 m-auto text-left justify-content-center">
+                <p class="display-6 py-4 ps-4 border border-5 border-top-0 border-end-0 border-bottom-0 border-start">
+                    <i>
+                          "Trabajan de pana.
+                            -el mismisimo."
+                      </i>
+                </p>
+                <p class="text-muted light-300">
+                    texto ejemplo
+                </p>
+            </div>
+        </div><!-- End Qute -->
+
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 pt-4 pb-4">
+                <div class="ratio ratio-16x9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ygr5AHufBN4" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div><!-- End Video -->
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 ml-auto mr-auto pt-3 pb-4">
+                <p class="text-muted light-300">
+                    reject humanity return to monke.
+                </p>
+            </div>
+        </div>
+        <!-- End Work Sigle -->
+<!-- 
+        <div class="row pb-4">
+            <div class="worksingle-comment-footer col-lg-8 m-auto">
+                <h4 class="h5">Comentanos!</h4>
+                <form class="col-md-12 m-auto" method="POST" action="#" role="form">
+
+                    <div class="form-group">
+                        <label class="pb-2 pt-sm-0 pt-4 light-300" for="inputmessage">Tu Comentario</label>
+                        <textarea class="form-control form-control-lg light-300" id="inputmessage" name="inputmessage" placeholder="" rows="5"></textarea>
+                    </div>
+
+                    <div class="row py-4">
+                        <div class="col-lg-6">
+                            <label class="pb-2 light-300" for="inputname">Nombre</label>
+                            <input type="text" class="form-control form-control-lg light-300" id="inputname" name="inputname" placeholder="Nombre">
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="pb-2 pt-sm-0 pt-4 light-300" for="inputemail">Email</label>
+                            <input type="email" class="form-control form-control-lg light-300" id="inputemail" name="inputemail" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="form-row pt-2">
+                        <div class="col-md-12 col-10 text-end">
+                            <button type="submit" class="btn btn-secondary text-white px-md-4 px-2 py-md-3 py-1 radius-0 light-300">Enviar mensaje</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> End Comment Form -->
+
+
+    </section>
+    <!-- End Work Sigle -->
+
+    <!-- Start Related Post -->
+    <article class="container-fluid bg-light">
+    
+    </article>
+    <!-- End Related Post -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Templatemo -->
+    <script src="assets/js/templatemo.js"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom.js"></script>
+    <!-- SWEET ALERT -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Page Script -->
+    <script>
+        $(window).load(function() {
+            // Slide
+            $('.templatemo-slide-link').click(function() {
+                var this_href = $(this).attr('href');
+                $('#templatemo-slide-link-target img').attr('src', this_href);
+                return false;
+            });
+            // End Slide
+        });
+    </script>
+ 
+
+</body>
+
+{% endblock %}
